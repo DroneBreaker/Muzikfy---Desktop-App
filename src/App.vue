@@ -1,27 +1,10 @@
 <script setup>
-import { ref } from "vue";
-import { invoke } from "@tauri-apps/api/core";
-
-const greetMsg = ref("");
-const name = ref("");
-
-async function greet() {
-  // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-  greetMsg.value = await invoke("greet", { name: name.value });
-}
+import { RouterView } from "vue-router";
 </script>
 
 <template>
-  <main class="container">
-    <h1>Welcome to Muzikfy.</h1>
-
-    <center>
-      <form class="row" @submit.prevent="greet">
-        <input id="greet-input" v-model="name" placeholder="Enter a name..." />
-        <button style="margin-left: 20px;" type="submit">Greet</button>
-      </form>
-      <p>{{ greetMsg }}</p>
-    </center>
+  <main class="bg-black h-[100vh] text-white">
+    <RouterView/>
   </main>
 </template>
 
