@@ -1,6 +1,8 @@
 <template>
     <div class="pt-[20%] justify-items-center">
-        <h1 class="text-center text-7xl mb-6 ml-[5rem]">Login to Muzikfy</h1>
+        <h1 class="text-center text-7xl h-[5rem] mb-6 ml-[5rem] bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-pink-500 tracking-light">
+            {{ loginIntroMessage }}
+        </h1>
 
         <form>
             <div class="mb-6">
@@ -23,6 +25,16 @@
  * IMPORTS
  */
  import Button from '../components/Button.vue';
+
+/**
+ * PROPS
+ */
+ const props = defineProps({
+    loginIntroMessage: {
+        type: String,
+        default: "Login to Muzikfy",
+    }
+ })
 </script>
 
 <style lang="scss" scoped>

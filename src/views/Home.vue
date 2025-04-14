@@ -1,6 +1,8 @@
 <template>
     <div>
-        <h1 class="text-center pt-[14rem] text-5xl">{{ introMessage }}</h1>
+        <h1 class="text-center pt-[16rem] text-6xl bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500 tracking-light">
+            {{ introMessage }}
+        </h1>
     </div>
 </template>
 
@@ -26,7 +28,6 @@ const router = useRouter();
     introMessage: {
         type: String,
         default: 'Welcome to Muzikfy',
-        required: true
     }
  })
 
