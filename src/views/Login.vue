@@ -14,6 +14,11 @@
             </div>
         </form>
 
+        <p class="mb-4 text-sm ml-18">
+            {{ noAccount }}
+            <RouterLink to="/register">Create an Account</RouterLink>
+        </p>
+
         <div>
             <Button class="ml-[5rem]" buttonText="Login"/>
         </div>
@@ -24,7 +29,8 @@
 /**
  * IMPORTS
  */
- import Button from '../components/Button.vue';
+ import { RouterLink } from 'vue-router';
+import Button from '../components/Button.vue';
 
 /**
  * PROPS
@@ -33,6 +39,10 @@
     loginIntroMessage: {
         type: String,
         default: "Login to Muzikfy",
+    },
+    noAccount: {
+        type: String,
+        default: "Don't have an acount?"
     }
  })
 </script>

@@ -1,5 +1,7 @@
 pub mod api;
 pub mod services;
+pub mod models;
+pub mod db;
 
 
 use actix_web::{web, App, HttpServer, HttpResponse, Responder};

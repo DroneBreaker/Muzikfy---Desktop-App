@@ -1,4 +1,4 @@
-mod backend;
+pub mod backend;
 
 // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 #[tauri::command]

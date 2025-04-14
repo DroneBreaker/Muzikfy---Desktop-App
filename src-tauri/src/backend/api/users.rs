@@ -2,30 +2,6 @@ use actix_web::{get, post, web, HttpResponse, Responder};
 use serde::{Deserialize, Serialize};
 
 #[allow(dead_code)]
-#[derive(Debug, Deserialize)]
-pub struct Register {
-    pub name: String,
-    pub username: String,
-    pub email: String,
-    pub password: String,
-}
-
-#[derive(Debug, Deserialize)]
-pub struct Login {
-    pub username: String,
-    pub email: String,
-    pub password: String,
-}
-
-#[derive(Debug, Serialize)]
-pub struct UserResponse {
-    pub id: u32,
-    pub username: String,
-    pub email: String,
-    pub token: String,
-}
-
-#[allow(dead_code)]
 #[get("/users")]
 pub async fn all_users() -> impl Responder {
     HttpResponse::Ok().body("Users")
